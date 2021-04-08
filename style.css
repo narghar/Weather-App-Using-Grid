@@ -1,0 +1,13 @@
+.container{
+    height: 500px;
+    margin-top:10px;
+    font-size: 25px;
+}
+
+.row{
+    height:33%;
+}
+
+.fa-location-arrow, .fa-search{
+    color:red;
+}
