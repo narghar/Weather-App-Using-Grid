@@ -15,33 +15,52 @@
 </head>
 
 <body>
-    <div class="container bg-dark mt-3 w-0.25 p-0">
-        <nav class="navbar navbar-light bg-light">
+    <div class="container bg-dark mt-3 col-5 p-0.25">
+        <nav class="navbar navbar-light">
             <button type="button" class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#content">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="col input-group">
+                <input type="text" class="form-control mx-1" placeholder="Search for a city..." aria-label="Server">
+            </div>
+            <div class="col h-auto d-flex justify-content-start ">
+                <i class="fas fa-location-arrow mx-3"></i>
+                <i class="fas fa-search"></i>
+            </div>
             <div class="collapse navbar-collapse" id="content">
                 <ul class="navbar-nav">
-                    <li class="nav-item active"> + Add City to Favorites</li>
+                    <li class="nav-item active text-white"> + Add City to Favorites</li>
                 </ul>
             </div>
         </nav>
-        <div class="row align-items-start">
-            <div class="col mx-3 h-auto p-0">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for a city..." aria-label="Server">
-                </div>
-            </div>
-            <div class="col mx-3 h-auto ">
-                <i class="fas fa-location-arrow"></i>
-                <i class="fas fa-search"></i>
-            </div>
-        </div>
         <div class="row bg-primary">
-            <div class="col"></div>
-            <div class="col"> </div>
+            <div class="col my-auto">
+                <p>
+                    Ottawa
+                    <br>
+                    Friday 15:30
+                    <br>
+                    Sunny
+                </p>
+            </div>
+            <div class="col-auto border border-danger m-auto">
+                <i class="far fa-sun col"></i>
+                <p class="row m-auto">
+                    19 &deg; C
+                </p>
+
+            </div>
+            <div class="col my-auto">
+                <p>
+                    Wind: 8 km/h
+                    <br>
+                    Running Conditions: Good
+                </p>
+            </div>
         </div>
-        <div class="row bg-secondary"></div>
+        <div class="row bg-secondary">
+            
+        </div>
     </div>
 
 
