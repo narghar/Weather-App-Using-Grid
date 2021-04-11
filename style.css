@@ -1,11 +1,11 @@
 .container{
-    height: 500px;
+    height: 450px;
     margin-top:10px;
     font-size: 25px;
 }
 
-.row{
-    height:33%;
+i{
+    padding:0px;
 }
 
 .fa-location-arrow, .fa-search{
@@ -19,3 +19,9 @@ p{
 .fa-sun{
     font-size: 3.25em;
 }
+
+#button{
+    background-color: black;
+    text-shadow: black;
+}
+

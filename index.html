@@ -11,21 +11,22 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c18557e782.js" crossorigin="anonymous"></script>
+    
     <title>Weather App</title>
 </head>
 
 <body>
-    <div class="container bg-dark mt-3 col-5 p-0.25">
+    <div class="container bg-dark mt-3 col-7 p-0.25 text-white">
         <nav class="navbar navbar-light">
             <button type="button" class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#content">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="col input-group">
-                <input type="text" class="form-control mx-1" placeholder="Search for a city..." aria-label="Server">
+                <input id="city" type="text" class="form-control mx-1" placeholder="Search for a city..." aria-label="Server">
             </div>
             <div class="col h-auto d-flex justify-content-start ">
                 <i class="fas fa-location-arrow mx-3"></i>
-                <i class="fas fa-search"></i>
+                <button id="button" type="submit"><i class="fas fa-search"></i></button>
             </div>
             <div class="collapse navbar-collapse" id="content">
                 <ul class="navbar-nav">
@@ -33,19 +34,21 @@
                 </ul>
             </div>
         </nav>
-        <div class="row bg-primary">
-            <div class="col my-auto">
+        <div class="row bg-dark h-75">
+            <div class="col my-auto text-center">
                 <p>
-                    Ottawa
+                    <span id="city">Ottawa</span>
                     <br>
-                    Friday 15:30
+                    <div id="day">Friday</div> <div id="time">15:30</div>
                     <br>
-                    Sunny
+                    <span id="Weather">Sunny</span>
                 </p>
             </div>
-            <div class="col-auto border border-danger m-auto">
-                <i class="far fa-sun col"></i>
-                <p class="row m-auto">
+            <div class="col my-auto">
+                <div class="row text-center ">
+                    <i class="far fa-sun text-danger"></i>
+                </div>
+                <p class="row mx-auto justify-content-center">
                     19 &deg; C
                 </p>
 
@@ -58,8 +61,38 @@
                 </p>
             </div>
         </div>
-        <div class="row bg-secondary">
-            
+        <div class="row bg-dark justify-content-between p-3 h-auto">
+            <div class="col-auto mx-3">
+                <h6>Saturday</h6>
+
+                <div class="row mx-auto"><div class="row mx-auto"><i class="fas fa-cloud"></i></div></div>
+                <h6 class="text-center">8 &deg; C</h6>
+            </div>
+            <div class="col-auto mx-3">
+                <h6>Sunday</h6>
+                <div class="row mx-auto"><i class="fas fa-cloud"></i></div>
+                <h6 class="text-center">8 &deg; C</h6>
+            </div>
+            <div class="col-auto mx-3">
+                <h6>Monday</h6>
+                <div class="row mx-auto"><i class="fas fa-cloud"></i></div>
+                <h6 class="text-center">8 &deg; C</h6>
+            </div>
+            <div class="col-auto mx-3">
+                <h6>Tuesday</h6>
+                <div class="row mx-auto"><i class="fas fa-cloud"></i></div>
+                <h6 class="text-center">8 &deg; C</h6>
+            </div>
+            <div class="col-auto mx-3">
+                <h6>Wednesday</h6>
+                <div class="row mx-auto text-center"><i class="fas fa-cloud p-0"></i></div>
+                <h6 class="text-center">8 &deg; C</h6>
+            </div>
+            <div class="col-auto mx-3">
+                <h6>Thursday</h6>
+                <div class="row mx-auto"><i class="fas fa-cloud"></i></div>
+                <h6 class="text-center">8 &deg; C</h6>
+            </div>
         </div>
     </div>
 
@@ -70,5 +103,5 @@
     </script>
 
 </body>
-
+<script src="script.js"></script>
 </html>
