@@ -2,10 +2,12 @@
     height: 450px;
     margin-top:10px;
     font-size: 25px;
+    max-width: 850px;
 }
 
 i{
     padding:0px;
+    text-align: center;
 }
 
 .fa-location-arrow, .fa-search{
@@ -25,3 +27,12 @@ p{
     text-shadow: black;
 }
 
+#icon img{
+    color:red;
+    height:auto;
+    
+}
+
+h6{
+    text-align: center;
+}
