@@ -4,10 +4,13 @@
     font-size: 25px;
     max-width: 850px;
 }
-
+#city{
+    font-size:1.5em;
+}
 i{
     padding:0px;
     text-align: center;
+    display:inline;
 }
 
 .fa-location-arrow, .fa-search{
@@ -19,7 +22,8 @@ p{
 }
 
 .fa-sun{
-    font-size: 3.25em;
+    font-size: 1em;
+    display:inline;
 }
 
 #button{
@@ -38,13 +42,26 @@ h6{
 }
 
 svg{
-    animation: rotation 10s infinite linear;
+    height: 1.5em;
+    padding: 0px;
 }
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
+
+#temp{
+    font-size: 300%;
+    margin:0px;
+    padding: 0px;
+    text-align: end;
+}
+
+#numbers{
+   position: relative;
+   top:105px;
+}
+.weather{
+    position: relative;
+    left: 15px;
+    padding: 0px;
+    width:auto;
+    text-align: left;
+    display: inline;
+}
