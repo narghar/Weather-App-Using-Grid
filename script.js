@@ -1,7 +1,6 @@
 // OpenWeather Info
-const openWeatherKey = '9bd9831354bba0cbdcdeb62969eb416f';
+const openWeatherKey = '014e191a87bb557f510dab69fcf6462c';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/';
-
 const userInput = document.getElementsByTagName('input');
 const btn = document.getElementById('button');
 const days = [`Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`];
@@ -14,7 +13,6 @@ const weather = document.getElementById('Weather');
 const icon = document.getElementById('icon');
 const temp = document.getElementById('temp');
 
-
 // Geolocation API
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, fail);
@@ -23,11 +21,22 @@ if (navigator.geolocation) {
 }
 
 function success(position){
-    let lon = position.coords.longitude;
-    let lat = position.coords.latiude;
-    let fetchByLocation=`${weatherUrl}weather?lat=${lat}&lon=${lon}&appid=${openWeatherKey}`;
-    return fetchByLocation;
+ let lat=position.coords.latitude;
+ let lon=position.coords.longitude;
+ let url=`${weatherUrl}weather?lat=${lat}&lon=${lon}$appid=${openWeatherKey}`;
+ console.log(url);
+ try {
+    const response =  fetch(url);
+    if (response.ok) {
+        const jsonResponse =  response.json();
+        console.log(jsonResponse);
+        return jsonResponse;
+    }
+} catch (error) {
+    console.log('error');
 }
+}
+
 
 function fail() {
     alert(`Hmm, you'll need to allow geolocation for the app to work. Please reload the page`)
