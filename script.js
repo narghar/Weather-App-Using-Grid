@@ -25,9 +25,8 @@ function success(position) {
     let lon = position.coords.longitude;
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${openWeatherKey}`;
     console.log(url);
-    const response = fetch(url);
-    const jsonreponse=response.json();
-    return jsonreponse.then(forecast => createForecastHTML(forecast));
+    const response = fetch(url).then(response => response.json()).then(name=>name.name);
+    console.log(response)
 }
 
 
